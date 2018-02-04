@@ -1,0 +1,142 @@
+%\RequirePackage{snapshot}
+\documentclass[10pt,a4paper]{article}
+%\RequirePackage{graphics}
+\usepackage[dvips]{graphics}
+\RequirePackage{lineno} 
+\usepackage[pdftex]{color, graphicx}
+\usepackage{amsmath, amsthm}
+%\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{xspace}
+\usepackage{cite}
+\usepackage{ifthen}
+
+\RequirePackage{lineno}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-15mm}
+\setlength{\textheight}{245mm}
+\usepackage[pdfauthor={MT2 Team},bookmarks=true]{hyperref} % bookmarks
+
+%\title{\huge{Charge and flavour ratios in SUSY leptonic final states} \\
+\title{\huge{  
+Data Delivery Architecture for CMS Level-1 Tracking Trigger} \\
+\ \  \\
+\large{ }}
+\author{our names}
+\vspace{2cm}
+\date{\today}
+
+%========================================================================
+
+%\usepackage{topcapt}
+%\input{svjour.cls}
+%\input{cms-tdr-note.cls}
+%\input{cms-tdr.cls}
+\usepackage{hepparticles}
+\usepackage{heppennames2}
+\usepackage{ptdr-definitions}
+%\usepackage{pennames-ital}
+
+\newcommand{\MT}{\ensuremath{M_{\mathrm{T}}}\xspace}
+\newcommand{\MTmax}{\ensuremath{\MT^{\mathrm{max}}}\xspace}
+\newcommand{\MTmin}{\ensuremath{\MT^{\mathrm{min}}}\xspace}
+\newcommand{\SSee}{\ensuremath{\Pepm\Pepm}\xspace}
+\newcommand{\SSem}{\ensuremath{\Pepm\PGmpm}\xspace}
+\newcommand{\SSmm}{\ensuremath{\PGmpm\PGmpm}\xspace}
+\newcommand{\threel}{3\ensuremath{\ell}\xspace}
+\newcommand{\Mll}{\ensuremath{M_{\ell\ell}}\xspace}
+\newcommand{\MSFOS}{\ensuremath{M_{\mathrm{SFOS}}}\xspace}
+\newcommand{\ptlll}{\ensuremath{\pt(\ell\ell\ell)}\xspace}
+\newcommand{\ptlllvec}{\ensuremath{\ptvec(\ell\ell\ell)}\xspace}
+\newcommand{\ptveclll}{\ensuremath{\ptvec(\ell\ell\ell)}\xspace}
+\newcommand{\DPhilllMET}{\ensuremath{\Delta\phi\left(\ptlllvec,\ptvecmiss\right)}\xspace}
+\newcommand{\Mlll}{\ensuremath{M_{\ell\ell\ell}}\xspace}
+\newcommand{\Mjj}{\ensuremath{M_{\mathrm{jj}}}\xspace}
+\newcommand{\theLumi}{\ensuremath{35.9\fbinv}\xspace}
+\newcommand{\WHtoWWW}{\ensuremath{\cmsSymbolFace{WH}\to\cmsSymbolFace{WWW}^{(*)}}\xspace}
+\newcommand{\Wmp}{\PWmp}
+%\newcommand{\Pemp}{\ensuremath{\cmsSymbolFace{e}^{\mp}}\xspace}
+\newcommand{\WWW}{\ensuremath{\Wpm\Wpm\Wmp}\xspace}
+\newcommand{\SSWW}{\ensuremath{\Wpm\Wpm}\xspace}%use this to avoid useless space between the Wpm
+\newcommand{\ttW}{\ensuremath{\ttbar\Wpm}\xspace}%use this to avoid useless space between the Wpm
+\newcommand{\ttZ}{\ensuremath{\ttbar\PZ}\xspace}%use this to avoid useless space between the Wpm
+\newcommand{\ttV}{\ensuremath{\ttbar\mathrm{V}}\xspace}%use this to avoid useless space between the Wpm
+\newcommand{\ttH}{\ensuremath{\ttbar\mathrm{H}}\xspace}%use this to avoid useless space between the Wpm
+\newcommand{\eTL}{\ensuremath{\epsilon_{\mathrm{TL}}}\xspace}
+\newcommand{\etl}{\eTL}
+\newcommand{\ptl}{\ensuremath{\pt^{\ell}}\xspace}
+\newcommand{\ptvecl}{\ensuremath{\ptvec^{\,\ell}}\xspace}
+\newcommand{\ptlvec}{\ptvecl}
+\newcommand{\ptjet}{\ensuremath{\pt^{\text{jet}}}\xspace}
+\newcommand{\ptvecjet}{\ensuremath{\ptvec^{\,\text{jet}}}\xspace}
+\newcommand{\ptjetvec}{\ptvecjet}
+\newcommand{\ptcor}{\ensuremath{\pt^{\text{corr}}}\xspace}
+
+\begin{document}
+
+\hyphenation{had-ron-i-za-tion}
+\hyphenation{cal-or-i-me-ter}
+\hyphenation{de-vices}
+%\input{newcommand}
+
+
+
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\newpage
+%
+\tableofcontents
+\linenumbers
+\newpage
+
+%%%%%%%% Definitions
+%\def\eslash{{\hbox{$E$\kern-0.5em\lower-.05ex\hbox{/}\kern-0.10em}}}
+%\def\MET{\mbox{$\eslash_T$}}
+%\def\hslash{{\hbox{$H$\kern-0.5em\lower-.05ex\hbox{/}\kern-0.10em}}}
+%\def\MHT{\mbox{$\hslash_T$\ }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Begin text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Introduction}
+\include{CMSTrackTrigger}
+\include{HardwareSetup}
+\include{Results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+
+
+%\clearpage
+
+%
+\bibliography{}
+\bibliographystyle{lucas_unsrt_epjc}
+
+% For use with the tdr script comment \end{document} 
+\end{document}
+
+
+%\bibitem{Catani:2002ny} 
+%  S.~Catani, M.~Fontannaz, J.~P.~Guillet and E.~Pilon,
+%  %``Cross-section of isolated prompt photons in hadron hadron collisions,''
+%  JHEP {\bf 0205}, 028 (2002)
+%  [hep-ph/0204023].
+%  %%CITATION = HEP-PH/0204023;%%
+%%\cite{Aurenche:2006vj}
+%\bibitem{Aurenche:2006vj} 
+%  P.~Aurenche, M.~Fontannaz, J.~-P.~Guillet, E.~Pilon and M.~Werlen,
+%  %``A New critical study of photon production in hadronic collisions,''
+%  Phys.\ Rev.\ D {\bf 73}, 094007 (2006)
+%  [hep-ph/0602133].
+%  %%CITATION = HEP-PH/0602133;%%
+%\bibitem{PFT-11-001} CMS Collaboration,   \textit{"Tau Identification in CMS"}, CMS-PAS-TAU-11-001 (2011). 
+%\bibitem{EGM-10-006} CMS Collaboration, \textit{Isolated Photon Reconstruction and Identiﬁcation at $\sqrt{s}$ = 7 TeV}, 
+%                     CMS Physics Analysis Summary, CMS PAS EGM-10-006
+%\bibitem{PAS-BTV-10-001} CMS Collaboration, CMS-PAS-BTV-10-001.
+%
+%
