@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Demonstration System Design}{3}
+\contentsline {subsection}{\numberline {2.1}System Assumptions}{3}
+\contentsline {subsection}{\numberline {2.2}Hardware Assumptions}{3}
+\contentsline {section}{\numberline {3}Hardware Design}{4}
+\contentsline {subsection}{\numberline {3.1}Overview}{4}
+\contentsline {subsection}{\numberline {3.2}Pulsar3a Board}{5}
+\contentsline {section}{\numberline {4}Firmware Design}{5}
+\contentsline {subsection}{\numberline {4.1}Overview}{5}
+\contentsline {subsection}{\numberline {4.2}Front-End Data Delivery}{5}
+\contentsline {subsubsection}{\numberline {4.2.1}MGT RX}{5}
+\contentsline {subsubsection}{\numberline {4.2.2}Align}{5}
+\contentsline {subsubsection}{\numberline {4.2.3}Unpack}{5}
+\contentsline {subsubsection}{\numberline {4.2.4}BX Demux and Merge}{5}
+\contentsline {subsubsection}{\numberline {4.2.5}Rotator}{5}
+\contentsline {subsubsection}{\numberline {4.2.6}MGT TX and RX for Backplane Fabric}{6}
+\contentsline {subsubsection}{\numberline {4.2.7}Layer Demux and Merge}{6}
+\contentsline {subsubsection}{\numberline {4.2.8}FIFO}{6}
+\contentsline {subsection}{\numberline {4.3}Pattern Recogition Associative Memory}{6}
+\contentsline {subsection}{\numberline {4.4}Backend Pattern Recogition Stage}{6}
+\contentsline {subsubsection}{\numberline {4.4.1}Local to SSID}{6}
+\contentsline {subsubsection}{\numberline {4.4.2}Data Organizer}{6}
+\contentsline {subsubsection}{\numberline {4.4.3}Road to SSID}{6}
+\contentsline {subsubsection}{\numberline {4.4.4}Local to Global}{6}
+\contentsline {subsubsection}{\numberline {4.4.5}Stub Removal}{6}
+\contentsline {subsubsection}{\numberline {4.4.6}Track Fitters}{7}
+\contentsline {subsubsection}{\numberline {4.4.7}Duplication Removal}{7}

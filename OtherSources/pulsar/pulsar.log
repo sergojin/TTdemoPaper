@@ -1,0 +1,400 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Cygwin) (preloaded format=pdflatex 2017.6.27)  29 JUN 2017 15:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**pulsar.tex
+(./pulsar.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen105
+\Gm@wd@mp=\dimen106
+\Gm@odd@mp=\dimen107
+\Gm@even@mp=\dimen108
+\Gm@layoutwidth=\dimen109
+\Gm@layoutheight=\dimen110
+\Gm@layouthoffset=\dimen111
+\Gm@layoutvoffset=\dimen112
+\Gm@dimlist=\toks15
+)
+(/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count91
+\c@@ppsavesec=\count92
+\c@@ppsaveapp=\count93
+)
+(/usr/share/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip43
+\@affilsep=\skip44
+\c@Maxaffil=\count94
+\c@authors=\count95
+\c@affil=\count96
+) (./pulsar.aux)
+\openout1 = `pulsar.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen113
+\scratchbox=\box26
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen114
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=681.15898pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 74.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 74.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 74.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 74.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pulsar.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+ [2])
+\tf@toc=\write3
+\openout3 = `pulsar.toc'.
+
+ (./pulsar.lof)
+\tf@lof=\write4
+\openout4 = `pulsar.lof'.
+
+ (./pulsar.lot
+[3])
+\tf@lot=\write5
+\openout5 = `pulsar.lot'.
+
+ [4] <shelf.png, id=25, 174.6525pt x 225.09094pt>
+File: shelf.png Graphic file (type png)
+ <use shelf.png>
+Package pdftex.def Info: shelf.png used on input line 120.
+(pdftex.def)             Requested size: 170.71652pt x 220.03119pt.
+
+<fullmesh.png, id=27, 657.2053pt x 645.91313pt>
+File: fullmesh.png Graphic file (type png)
+ <use fullmesh.png>
+Package pdftex.def Info: fullmesh.png used on input line 133.
+(pdftex.def)             Requested size: 227.62204pt x 223.70758pt.
+ [5] [6 <./shelf.png> <./fullmesh.png (PNG copy)>]
+<pulsar2.jpg, id=36, 731.73375pt x 660.4675pt>
+File: pulsar2.jpg Graphic file (type jpg)
+ <use pulsar2.jpg>
+Package pdftex.def Info: pulsar2.jpg used on input line 160.
+(pdftex.def)             Requested size: 341.43306pt x 308.18246pt.
+
+<pulsar2b_block.png, id=37, 868.6854pt x 883.8621pt>
+File: pulsar2b_block.png Graphic file (type png)
+ <use pulsar2b_block.png>
+Package pdftex.def Info: pulsar2b_block.png used on input line 167.
+(pdftex.def)             Requested size: 284.52756pt x 289.50404pt.
+
+[7] [8 <./pulsar2.jpg> <./pulsar2b_block.png (PNG copy)>]
+<sync.png, id=46, 361.5909pt x 314.77066pt>
+File: sync.png Graphic file (type png)
+ <use sync.png>
+Package pdftex.def Info: sync.png used on input line 207.
+(pdftex.def)             Requested size: 284.52756pt x 247.70068pt.
+ [9] [10 <./sync.png (PNG copy)>] [11] <rtm_pwr.png, id=56, 579.1236pt x 194.48
+073pt>
+File: rtm_pwr.png Graphic file (type png)
+
+<use rtm_pwr.png>
+Package pdftex.def Info: rtm_pwr.png used on input line 257.
+(pdftex.def)             Requested size: 398.33858pt x 133.7734pt.
+ <fnal_ipmc.jpg, id=57, 1283.54532pt x 514.17094pt>
+File: fnal_ipmc.jpg Graphic file (type jpg)
+
+<use fnal_ipmc.jpg>
+Package pdftex.def Info: fnal_ipmc.jpg used on input line 277.
+(pdftex.def)             Requested size: 341.43306pt x 136.77246pt.
+ [12 <./rtm_pwr.png>] [13 <./fnal_ipmc.jpg>] [14]
+<bad_links.png, id=69, 419.31656pt x 98.61844pt>
+File: bad_links.png Graphic file (type png)
+ <use bad_links.png>
+Package pdftex.def Info: bad_links.png used on input line 352.
+(pdftex.def)             Requested size: 341.43306pt x 80.30031pt.
+ [15 <./bad_links.png (PNG copy)>] <comtel_results.png, id=74, 874.01532pt x 52
+4.71031pt>
+File: comtel_results.png Graphic file (type png)
+
+<use comtel_results.png>
+Package pdftex.def Info: comtel_results.png used on input line 368.
+(pdftex.def)             Requested size: 341.43306pt x 204.98047pt.
+
+Overfull \hbox (9.4896pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 In 2014 COM-TEL de-liv-ered to us one of their first pro-to-typ
+e ``Air-/-Plane" 100G full mesh backplanes[[]].
+ []
+
+[16 <./comtel_results.png (PNG copy)>]
+<rtm_results.png, id=78, 415.5525pt x 620.3175pt>
+File: rtm_results.png Graphic file (type png)
+ <use rtm_results.png>
+Package pdftex.def Info: rtm_results.png used on input line 386.
+(pdftex.def)             Requested size: 284.52756pt x 424.74455pt.
+
+[17 <./rtm_results.png (PNG copy)>]
+<fmc_results.png, id=82, 727.21687pt x 411.78844pt>
+File: fmc_results.png Graphic file (type png)
+ <use fmc_results.png>
+Package pdftex.def Info: fmc_results.png used on input line 402.
+(pdftex.def)             Requested size: 284.52756pt x 161.11835pt.
+
+[18 <./fmc_results.png (PNG copy)>]
+<link_cdc.png, id=86, 1015.54407pt x 274.02374pt>
+File: link_cdc.png Graphic file (type png)
+ <use link_cdc.png>
+Package pdftex.def Info: link_cdc.png used on input line 439.
+(pdftex.def)             Requested size: 426.79134pt x 115.16026pt.
+ [19]
+[20 <./link_cdc.png (PNG copy)>]
+<teststand.jpg, id=94, 1003.75pt x 752.8125pt>
+File: teststand.jpg Graphic file (type jpg)
+ <use teststand.jpg>
+Package pdftex.def Info: teststand.jpg used on input line 478.
+(pdftex.def)             Requested size: 341.43306pt x 256.07921pt.
+
+<interlock.png, id=95, 1300.86pt x 806.26219pt>
+File: interlock.png Graphic file (type png)
+ <use interlock.png>
+Package pdftex.def Info: interlock.png used on input line 489.
+(pdftex.def)             Requested size: 341.43306pt x 211.61624pt.
+ [21]
+[22 <./teststand.jpg> <./interlock.png (PNG copy)>]
+<dsb.png, id=102, 1084.05pt x 398.23781pt>
+File: dsb.png Graphic file (type png)
+ <use dsb.png>
+Package pdftex.def Info: dsb.png used on input line 506.
+(pdftex.def)             Requested size: 426.79134pt x 156.78873pt.
+ [23 <./dsb.png>]
+<prb.png, id=107, 1300.1072pt x 427.5975pt>
+File: prb.png Graphic file (type png)
+ <use prb.png>
+Package pdftex.def Info: prb.png used on input line 528.
+(pdftex.def)             Requested size: 426.79134pt x 140.3638pt.
+ [24 <./prb.png (PNG copy)>] <merge.png, id=111, 1445.4pt x 527.72156pt>
+File: merge.png Graphic file (type png)
+ <use merge.png>
+Package pdftex.def Info: merge.png used on input line 549.
+(pdftex.def)             Requested size: 398.33858pt x 145.43388pt.
+ [25 <./merge.png (PNG copy)>] [26]
+<prb_latency_scope.png, id=119, 530.98375pt x 430.60875pt>
+File: prb_latency_scope.png Graphic file (type png)
+
+<use prb_latency_scope.png>
+Package pdftex.def Info: prb_latency_scope.png used on input line 625.
+(pdftex.def)             Requested size: 341.43306pt x 276.89618pt.
+ [27] [28 <./prb_latency_scope.png>]
+<arch.png, id=127, 1734.48pt x 702.37407pt>
+File: arch.png Graphic file (type png)
+ <use arch.png>
+Package pdftex.def Info: arch.png used on input line 639.
+(pdftex.def)             Requested size: 398.33858pt x 161.30685pt.
+ [29
+
+ <./arch.png (PNG copy)>] [30] [31] [32] [33] [34]
+Overfull \hbox (18.53355pt too wide) in paragraph at lines 918--966
+ [][] 
+ []
+
+[35] [36] (./pulsar.aux) ) 
+Here is how much of TeX's memory you used:
+ 2361 strings out of 494936
+ 32927 string characters out of 6181325
+ 121922 words of memory out of 5000000
+ 5618 multiletter control sequences out of 15000+600000
+ 9183 words of font info for 33 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 39i,8n,25p,1575b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on pulsar.pdf (36 pages, 3639556 bytes).
+PDF statistics:
+ 200 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+

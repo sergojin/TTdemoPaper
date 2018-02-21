@@ -1,0 +1,63 @@
+\contentsline {section}{\numberline {1}Introduction}{5}
+\contentsline {section}{\numberline {2}Advanced Telecommunication Computing Architecture}{5}
+\contentsline {subsection}{\numberline {2.1}Specifications}{5}
+\contentsline {subsection}{\numberline {2.2}Backplane Networks}{5}
+\contentsline {subsection}{\numberline {2.3}Hardware Platform Management}{6}
+\contentsline {subsection}{\numberline {2.4}Power and Cooling}{7}
+\contentsline {section}{\numberline {3}Pulsar IIb Front Board}{7}
+\contentsline {subsection}{\numberline {3.1}FPGA}{7}
+\contentsline {subsection}{\numberline {3.2}RTM Interface}{9}
+\contentsline {subsection}{\numberline {3.3}Fabric Interface}{9}
+\contentsline {subsection}{\numberline {3.4}Mezzanine Cards}{9}
+\contentsline {subsection}{\numberline {3.5}FPGA Configuration}{9}
+\contentsline {subsection}{\numberline {3.6}Backplane Synchronization Interface}{9}
+\contentsline {subsection}{\numberline {3.7}Scratchpad DRAM}{10}
+\contentsline {subsection}{\numberline {3.8}Board Management}{11}
+\contentsline {subsection}{\numberline {3.9}Sensors and Telemetry}{11}
+\contentsline {subsection}{\numberline {3.10}Power Distribution}{11}
+\contentsline {section}{\numberline {4}Rear Transition Board}{11}
+\contentsline {subsection}{\numberline {4.1}QSFP+ Optical Transceivers}{11}
+\contentsline {subsection}{\numberline {4.2}Management Microcontroller}{12}
+\contentsline {subsection}{\numberline {4.3}Power Distribution}{12}
+\contentsline {section}{\numberline {5}Intelligent Platform Management Controller}{12}
+\contentsline {subsection}{\numberline {5.1}Core IPMI Functionality}{13}
+\contentsline {subsection}{\numberline {5.2}Non-IPMI Features for Slow Controls}{13}
+\contentsline {subsubsection}{\numberline {5.2.1}Xilinx Virtual Cable JTAG Interface}{14}
+\contentsline {subsubsection}{\numberline {5.2.2}SPI Server}{14}
+\contentsline {subsubsection}{\numberline {5.2.3}FTP}{14}
+\contentsline {subsubsection}{\numberline {5.2.4}Telnet}{14}
+\contentsline {section}{\numberline {6}Link Performance Testing}{15}
+\contentsline {subsection}{\numberline {6.1}Full Mesh Backplane}{15}
+\contentsline {subsubsection}{\numberline {6.1.1}10G and 40G Backplane Testing}{15}
+\contentsline {subsubsection}{\numberline {6.1.2}100G Backplane Testing}{16}
+\contentsline {subsection}{\numberline {6.2}Rear Transition Module}{16}
+\contentsline {subsection}{\numberline {6.3}Mezzanine Cards}{17}
+\contentsline {subsubsection}{\numberline {6.3.1}Serial Interface}{18}
+\contentsline {subsubsection}{\numberline {6.3.2}Parallel Interface}{18}
+\contentsline {section}{\numberline {7}System Integration}{18}
+\contentsline {subsection}{\numberline {7.1}Synchronization}{19}
+\contentsline {subsection}{\numberline {7.2}Serial Link Encoding}{19}
+\contentsline {subsection}{\numberline {7.3}Serial Link Clocking and Alignment}{19}
+\contentsline {section}{\numberline {8}The CMS L1 Tracking Trigger Demonstration System}{20}
+\contentsline {subsection}{\numberline {8.1}Introduction}{20}
+\contentsline {subsection}{\numberline {8.2}Data Delivery Overview}{21}
+\contentsline {subsection}{\numberline {8.3}Fermilab Test Stand}{21}
+\contentsline {subsubsection}{\numberline {8.3.1}Safety and Interlocks}{23}
+\contentsline {subsection}{\numberline {8.4}Data Source Boards}{23}
+\contentsline {subsubsection}{\numberline {8.4.1}DSB Firmware}{23}
+\contentsline {subsubsection}{\numberline {8.4.2}DSB Network Connection}{24}
+\contentsline {subsection}{\numberline {8.5}Pattern Recognition Boards}{24}
+\contentsline {subsubsection}{\numberline {8.5.1}Receive Logic, Alignment and Unpacking}{24}
+\contentsline {subsubsection}{\numberline {8.5.2}BX Demux and Merge Logic}{25}
+\contentsline {subsubsection}{\numberline {8.5.3}Data Transfer Across the Full Mesh Fabric}{26}
+\contentsline {subsubsection}{\numberline {8.5.4}Layer Sort Logic}{26}
+\contentsline {subsection}{\numberline {8.6}Data Delivery Latency}{27}
+\contentsline {section}{Appendix \numberline {A}Full Mesh and Direct Flow Architecture}{29}
+\contentsline {subsection}{\numberline {A.1}Full Mesh}{29}
+\contentsline {subsection}{\numberline {A.2}Direct Flow}{29}
+\contentsline {subsubsection}{\numberline {A.2.1}DTC Boards}{29}
+\contentsline {subsubsection}{\numberline {A.2.2}Link Bandwidth}{30}
+\contentsline {subsubsection}{\numberline {A.2.3}Fiber Mapping}{30}
+\contentsline {section}{Appendix \numberline {B}MGT Channel Assignments}{31}
+\contentsline {section}{Appendix \numberline {C}LVDS Signal Assignments for Mezzanines}{33}
+\contentsline {section}{Appendix \numberline {D}Pulsar2b Board Sensors}{35}

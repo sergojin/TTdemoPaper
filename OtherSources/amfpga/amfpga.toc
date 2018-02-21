@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}PRAM Overview}{3}
+\contentsline {subsection}{\numberline {2.1}RAM and CAM Architectures}{3}
+\contentsline {subsection}{\numberline {2.2}PRAM Architecture}{3}
+\contentsline {subsubsection}{\numberline {2.2.1}PRAM Cell}{4}
+\contentsline {subsubsection}{\numberline {2.2.2}Serialization Logic}{4}
+\contentsline {subsubsection}{\numberline {2.2.3}Pipelined Operation}{4}
+\contentsline {section}{\numberline {3}FPGA Implementation}{4}
+\contentsline {subsection}{\numberline {3.1}I/O Interface}{4}
+\contentsline {subsection}{\numberline {3.2}PRAM Cell}{5}
+\contentsline {subsubsection}{\numberline {3.2.1}CAM Design}{5}
+\contentsline {subsubsection}{\numberline {3.2.2}Majority Logic}{6}
+\contentsline {subsection}{\numberline {3.3}Serialization Logic}{6}
+\contentsline {subsubsection}{\numberline {3.3.1}Road Flag Registers and Selection MUX}{6}
+\contentsline {subsubsection}{\numberline {3.3.2}Merge Sort Logic}{7}
+\contentsline {subsection}{\numberline {3.4}Device Resources and Performance}{7}
+\contentsline {section}{\numberline {4}Pattern Density Optimization Studies}{8}
+\contentsline {subsection}{\numberline {4.1}Device Resources and Performance}{9}
