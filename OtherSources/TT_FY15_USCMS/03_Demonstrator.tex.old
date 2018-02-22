@@ -1,0 +1,61 @@
+\section{Vertical Slice Demonstrator System}
+
+\subsection{Overview and methodology}
+
+\noindent The flexible architecture described above lends itself to an early technical demonstration of the system. The main goal of the demonstration system is to identify possible problems in the architecture design and, hopefully, find solutions. We would study, measure and optimize trigger latency and efficiencies at different stages of the system using hardware prototypes being developed. This will involve extensive simulation work, to guide the hardware implementation and to compare actual measurements with expectations. A possible Vertical Slice Demonstration System is shown in Figure~\ref{fig:VS_TBench}. Each stage is described in more detail in the following sections. 
+
+Although the architecture is flexible enough to allow for different configurations, for the sake of clarity and simplicity, in what follows we will often use the specific configuration with eight Data Input Boards and four Pattern Recognition Boards as an example. We will decide only at a later time which specific configuration we will actually use for the demonstration system.
+
+This demo system will be implemented in stages, at mezzanine level, board level, crate level and multi crate level. These different stages would naturally proceed in sequence, from the bottom up. This way, we will have the opportunity to learn along the way about the performance of the different components of the system before having to decide exactly how the whole thing will be cabled up. Also, the extra crate, with three neighbor towers, will need to come into play only at a very advanced stage, towards the end when the system dynamics need to be demonstrated.  
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.8\columnwidth]{Plots/VSTBench.eps}
+\caption{Vertical slice test bench principle.}
+\label{fig:VS_TBench}
+\end{figure}
+
+\subsection{Data Source Stage}
+
+\noindent The Data Source mimics the data flow out of the upgraded Phase II outer-tracker running at the HL-LHC. It will drive 300+ fibers (one/module) to the trigger tower under study exactly as the data were coming from the real detector at high luminosity and full speed. Each fiber connection will transmit data at 3.25~Gbps payload bandwidth, in the same way as the actual modules in the future real system. The data will be derived from simulation, appropriately formatted, stored into on-board memories, and then played back at full speed.
+
+\subsection{Data Input}
+
+\noindent The Data Input Blade (DIB) is responsible for receiving data from the upstream detector electronics (or Data Source output) and transferring them to the PRBs. Up to about 40 fiber links will be received by each DIB. These input links may terminate on the RTM or mezzanine cards. Input fiber links are nominally 3.25~Gb/s payload bandwidth. The Data Input Board will perform zero suppression, pack the stubs into a new format and send them to the PRBs. Current estimates indicate that a rate of about 200 stubs per event per trigger tower, which yields a data rate of roughly 256~Gb/s (200 stubs*32~bits/25~ns) entering each trigger tower on average.
+
+\noindent As an example, in the configuration with eight DIBs and four PRBs, each DIB will be receiving an average of about 256/8 = 32 Gb/s of stub data (after zero suppression). Each of the eight DIBs in the shelf sends data to four PRBs in a round-robin, time multiplexed fashion. Since data is sent to four PRBs, these transfers can take place at a quarter of the input rate, or 32/4 = 8~Gb/s, as shown in \ref{tab:shelves}.
+
+\noindent In Figure~\ref{fig:VS_TBench}, the ATCA shelf devoted to the "core" trigger tower is shown equipped with 8 DIB boards and 4 PRB boards while the shelf devoted to the "neighbor" towers is equipped with 8 PRB boards. In general, each tower needs to share data with 8 neighbors but 3 are sufficient in the demonstration system to test all possible data sharing cases (eta, phi and "diagonal"). Simulated data corresponding to three neighbor tower are delivered from PRB boards in the "neighbor" shelves to the corresponding PRB boards in the "core" shelf.
+
+\subsection{Pattern Recognition Board}
+
+\noindent Using again the special configuration above (8 DIB + 4 PRB), each PRB will be receiving 64 Gb/s stub data on average. While receiving the data and sending them to the mezzanine cards, each PRB will exchange data with the corresponding PRB, processing the same time slice, in the neighboring tower for data sharing in the overlap regions. In this case, each PRB can use four 40Gb/s links (QSFP) for the connections in the eta and phi directions, and four 10Gb/s links (SFP+) can be used for data sharing in the "diagonal" directions (see Figure below for the shelf interconnections). The PRB FPGA drives data received from the DIBs to the Pattern Recognition Mezzanine (PRM) boards. This can also be done in a 4x time multiplexed fashion. The 4x time multiplexed transfers from the PRB FPGA to the PRM would require a bandwidth of about 16Gb/s this way. This also means that each PRM must contain all of the patterns for the trigger tower in this special configuration.
+
+ 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.4\columnwidth]{Plots/VSTBench_2.eps}
+\caption{}
+\label{fig:VS_TBench_2}
+\end{figure}
+
+
+\subsection{Pattern Recognition Mezzanine Card}
+
+\noindent Each PRB supports four Pattern Recognition Mezzanine (PRM) boards. These boards are based on the FMC standard and support high speed LVDS and SERDES connections to the PRB FPGA. In one possible incarnation, each PRM will contain an FPGA, on board memory to act as Data Buffer, and an array of pattern recognition devices. In our example configuration, we need to support 16~Gb/s between the PRB FPGA and the PRM. PRM's using different approaches to track finding and fitting may be tested and compared within the same overall high-level system architecture and data dispatching scheme.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.6\columnwidth]{Plots/VSTBench_3.eps}
+\caption{PRM working principle}
+\label{fig:VS_TBench_3}
+\end{figure}
+
+\noindent  The FPGA-PRAM channel bandwidth needs will be a fraction of the PRM input bandwidth, because only relevant stubs will be sent to the relevant pattern recognition chip covering the relevant regions of the trigger tower (see Figure~\ref{fig:VS_TBench_3}).
+
+\subsection{Track Fitting} 
+
+\noindent The traditional CDF SVT/FTK-style track fitting stage can be used to benchmark the performance of this stage. We are exploring other new approaches as well, such as Hough transform algorithm and tracklet-based algorithm. All track fitting algorithms can be implemented in FPGA on the PRMs, therefore they can be studied and compared directly using the same vertical slice demonstration setup. More detailed description of the two new approaches will become available in this section later. As a reference, the traditional SVT/FTK-style track fitting is described below~\cite{bib:FTK-10}.
+
+
+\clearpage

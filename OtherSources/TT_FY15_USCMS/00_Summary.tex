@@ -1,0 +1,74 @@
+\section{R\&D Overview}
+
+%\begin{center}
+%{\Large\bf Introduction}
+%\end{center}
+
+%\vspace{0.5cm}
+
+\subsection{Physics Motivations}
+
+As outlined recently by the US P5 report as well as by the European Strategy reports and CERN management, the high luminosity LHC (HL-LHC) is one of the top priorities for the particle physics community. The CMS collaboration intends to pursue a rich physics program in the era of the HL-LHC. Precision measurements of the properties of the newly discovered Higgs boson will clearly be central to the CMS physics program.  The relatively low transverse momentum of Higgs decay products will make Higgs identification a formidable task in the harsh collision environment of the HL-LHC.
+
+Virtual corrections to the Higgs mass imply that its natural value should be very far from the electroweak scale. In the absence of fine-tuning, the low value observed for the Higgs mass strongly suggests the presence of new physics. A variety of new physics scenarios (composite Higgs, extra dimensions and super-symmetry, for example) naturally tame radiative Higgs mass corrections. It is therefore essential for CMS to have the ability to cover a large region of phase space for potential new particle production. This phase space, like the Higgs, is near the threshold of current CMS triggering capabilities. With the existing L1 system, the higher trigger rates anticipated in the HL-LHC will necessitate significantly higher trigger thresholds, drastically diminishing the discovery potential of CMS.
+
+Perhaps the largest open question the HL-LHC can address involves the production of dark matter. Physics analyses at the LHC are capable of confirming or denying the existence of dark matter in regions of space that direct and indirect detection experiments can not reach. Signatures of dark matter in a proton collision environment typically involve missing transverse energy (MET), a quantity that is difficult to utilize in high pileup conditions.  Recently, however, novel MET reconstruction techniques have demonstrated an encouraging degree of pileup insensitivity.  These techniques rely heavily on tracking information, and can in principle be utilized for MET calculations performed in the trigger, as well as in the offline environment.
+
+The physics program outlined above involves signatures with relatively low energy or with poorly resolved final state objects. Such objects require low L1 trigger thresholds that are robust against the high intensity and pileup conditions expected at the HL-LHC. The trigger thresholds used in current physics analyses cannot be maintained at the HL-LHC without incorporating tracking information into the earliest stage of the event selection process. Maintaining low trigger thresholds in order to preserve high efficiency for low-pt objects is the primary physics motivation of the work proposed here.
+
+
+
+\subsection{R\&D Overview}
+
+
+\noindent 
+
+While the discovery of the Higgs boson is a major achievement, many questions remain, including those regarding the precise mechanism of electroweak symmetry breaking and the nature of dark matter. In order to maximize the potential for discovery, CMS must preserve or improve its ability to identify, in real time, events with signatures consistent with the Higgs boson and new particle decays. This is a highly non-trivial task given the high pile-up conditions anticipated in the HL-LHC era.
+
+At CMS, the only major detector not used in the present L1 trigger is the Silicon Tracker. It has become clear that the development of a L1 tracking trigger will be required for CMS to maintain physics acceptances for basic objects (leptons, photons, jets and MET) in the HL-LHC era. Without L1 tracking, the resolution of quantities traditionally used in L1 will seriously degrade due to pileup effects.  Trigger thresholds would need to increase in response, which would lead to unacceptable losses in trigger efficiency.  Most of the anticipated CMS physics program would slip out of reach.
+
+Consequently, the design of the Phase-II CMS Tracker must allow for an effective implementation of the tracking trigger.  Because the construction of the Phase-II Tracker will take many years, its design must be finalized soon (by the 2017 TDR).  A silicon-based L1 tracking trigger has never been realized at this scale and thus it is imperative that its feasibility be demonstrated before the design of the Phase-II Tracker can be finalized.  Silicon-based Level-2 tracking trigger systems based on associative memory were successfully implemented in the past~\cite{bib:Rist-89}~\cite{bib:Ade-07} and are being actively explored at present~\cite{bib:FTK-TDR}. Experience with these systems will serve as useful input to the design of the CMS L1 tracking trigger. However the higher occupancies anticipated at the HL-LHC and the low latencies required at L1 (about serveral $\mu$s for the track finding stage) present us with a formidable set of challenges that must be attacked with a well organized R\&D project. The participation of CMS institutions with strong expertise in modern high-speed electronics and pattern recognition technologies will be crucial for the success of this important R\&D program. 
+
+%The short time available for the design and implementation of the L1 tracking trigger demonstration system %poses additional challenges as it does not allow sufficient time for starting R\&D efforts from scratch. 
+A number of USCMS institutions led by Fermilab have established a strong generic R\&D program in the area of silicon-based tracking trigger. This R\&D program, funded mostly by non-CMS sources until last year, has so far yielded excellent prototype results and put USCMS in the unique position to develop a working solution for the CMS L1 track trigger. The long-term goal of this R\&D effort is to develop these critical technologies to the point where we can ultimately propose them as a viable solution to the problems of HL-LHC L1 track triggering. Given the fact that Tracker Upgrade TDR is due in a few years,
+the progress made so far by this R\&D has well positioned us to take the next important step to establish a Vertical Slice Demonstration System. We have proposed a new architecture and system demonstration design~\cite{bib:CMS_TT_Demo} to the CMS Phase-II Tracker community, and this has been well-received. This system will comprise a full tracking trigger path and will be used with simulated high-luminosity data to measure trigger latency and efficiency, to study overall system performance and to identify appropriate solutions to possible bottlenecks. The proposed system is not intended to be final; rather, serves the purpose of an existence proof. If a functional vertical slice can be demonstrated with today's technology, Moore's law and developments in the semiconductor industry guarantee that the tracking trigger will become less expensive and more performant as we progress toward the HL-LHC.
+
+	Processing each beam crossing implies finding and fitting thousands of tracks starting from a collection of "stubs" (hit pairs) from the front-end Tracker sensors. 40M beam crossings per second must be processed  with a maximum latency of order of a few microseconds. The total raw computation power needed to solve this problem is huge, several orders of magnitude larger than what has ever been used for L1 triggering in the past. The problem obviously calls for massive parallelism. We choose a processing scheme in which data from different bunch crossings or from different regions of the detector in the same crossing are processed in parallel.  For the purpose of regional multiplexing, we divide the detector into 48 angular regions (6 in $\eta$ times 8 in $\phi$) we call "towers". We assign multiple processing engines to each tower so that data from that  tower and from different crossings may be processed in parallel. 
+In such a parallel system, one signficant problem is how to optimally distribute data among the various processors. Data from the same crossing, coming from different detector elements, must be assembled and delivered to the same processing unit for track reconstruction. Data from different crossings, coming from the same detector element, must be delivered to different processing units for optimal time multiplexing. The subdivision of the detector into geographical towers, does not lead to an exact corresponding subdivision of the track parameter space. Data coming from a given geographical tower may need to be delivered to multiple parameter space regions. This happens, in particular, when a stub comes from a detector element close to the border between geographical towers, due to the finite curvature of charged particles in the magnetic field and finite size of the luminous region along the beam axis. 
+
+	In addition to the complex data dispatching challenge, there is the obvious challenge of finding and fitting hundreds of billions of tracks every second. This requires extremely fast pattern recognition algorithms. The Associative Memory~\cite{bib:Rist-89} uses a massively parallel architecture to tackle the intrinsically complex combinatorics of track finding algorithms, avoiding the typical power law dependance of execution time on occupancy and solving the pattern recognition in times roughly proportional to the number of hits. This is of crucial importance given the large occupancy fluctuations typical of hadronic collisions. 
+The design of an Associative Memory system capable of dealing with the complexity of HL-LHC collisions and with the short latency required by Level 1 triggering poses significant, as yet unsolved, technical challenges.
+For this reason, an aggressive R\&D program at Fermilab has been lanuched to advance the state of-the-art in associative memory technology  (3D VIPRAM~\cite{bib:VIP-11} R\&D is funded by DOE CDRD program~\cite{bib:VIP-12}).
+
+Because the Associative Memory approach is thus far the only proven solution to hardware-based tracking triggers in a hadron collider environment (albeit only for Level 2 triggers applications), it is chosen as the baseline for the demonstration in what follows.  The overall system architecture we are proposing, however, is open and flexible, and could be used to support a variety of pattern recognition engines.  This will provide for testing and direct comparisons with possible alternative pattern recognition scheme, such as the tracklet-based approach, described in a separate proposal.
+
+
+%Although silicon-based tracking trigger at Level-2 trigger has been implemented successfully using the %associative memory approach, the speed of such an approach needs to be demonstrated before it can %become a viable solution for CMS L1 tracking trigger.  such as the tracklet based approach orginally %developed for the Long Barrel detector concept. The tracklet approach for Barrel-Endcap detector geometry %is now being pursued by the Cornell group.
+
+%Overall architecture
+	For the reasons above, the design of the overall architecture is focused on the need for efficient dispatching of the data for time and regional multiplexing, and on providing a common, flexible framework for pattern recognition and track fitting. Efficient data dispatch for time and regional multiplexing requires high bandwidth, low latency, and flexible real time communication between processing nodes.  A completely interconnected, ``full mesh'' backplane is a natural fit to these criteria. A custom full mesh enabled ATCA board called Pulsar II has been designed at Fermilab with the goal of creating a scalable architecture abundant in flexible, non-blocking, high bandwidth board-to-board communication channels. The Pulsar II hardware will be the workhorse for the vertical slice demonstration. The architecture we are proposing for the CMS L1 tracking trigger demonstration permits high bandwidth inter-board communication. 
+The full-mesh backplane is used to time-multiplex the high volume of incoming data in such a way that I/O demands are manageable at the board and chip level. The resulting architecture will provide an early technical demonstration using existing technology, will allow for the exploration and comparison of various approaches for pattern recognition and track fitting.
+
+% Given that Advanced Mezzanine Card (AMC) specifications are designed to work with both ATCA and %microTCA, the architecture naturally allows for the long-term integration of Tracker DAQ (AMC based) and %tracking trigger activities. 
+
+%\noindent The purpose of this R\&D proposal is to build a vertical slice demonstration test bench to 
+%demonstrate track finding and to identify possible bottlenecks and find solutions, using technology that is %available today. This "Vertical Slice" will process simulated data with HL-LHC occupancy at full speed, to %allow us to study and improve the system and tracking performance (such as latency, efficiency and fake %rate). 
+%Based on past experience, we believe that the final technology choices for the final implementation of L1 %track finding can be delayed until about four years from the start of commissioning. The goal of this R\&D is %to demonstrate that the track finding can be done so that the tracker detector design can be finalized in the %near future. 
+
+The proposed system architecture is described in the following section. We describe an affordable demonstration system that can be designed and built within 2-3 years.  We then define the ”Vertical Slice” that we propose as the deliverable of this R\&D project. Next, we describe the track finding approach we are pursuing, and discuss the advantages and challenges related to this approach.  We then discuss the work that has been accompished thus far and that which is required in the coming two years.  We close with the funding request. This USCMS R\&D project, if adequtely funded, will allow our community to focus attention on the complex challenges of L1 tracking, to compare different possible solutions to the fundamental pattern recognition and track fitting problems in the HL-LHC era, and to gain the experience necessary to design the final system.
+
+
+%Main components
+
+%Fiber data transmission,
+%ATCA crates,
+%Full mesh backplane,
+%Fiber receivers,
+%Pattern Recognition Boards,
+%Pattern Recognition Mezzanines,
+%AM as a possible incarnation (3d technology),
+%Inter-tower communication,
+
+%Bandwidth and latency considerations
+
+

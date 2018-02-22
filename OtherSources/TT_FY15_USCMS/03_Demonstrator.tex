@@ -1,0 +1,67 @@
+\subsection{Vertical Slice Demonstrator System: Overview and Methodology}
+
+\noindent The flexible architecture described above lends itself to an early technical demonstration of the system. The main goal of the demonstration system is to identify possible problems in the architecture design and, hopefully, find solutions. We would study, measure and optimize trigger latency and efficiencies at different stages of the system using the hardware prototypes that are being developed. 
+Extensive simulation work is needed to guide the hardware implementation and to establish performance expectations that can be compared with actual measurements. The proposed Vertical Slice Demonstration System is shown in Figure~\ref{fig:VS_TBench}. 
+
+\noindent The Data Source mimics the data flow out of the upgraded Phase II outer-tracker. It will drive 300+ fibers (one/module) to the trigger tower under study exactly as if the data were coming from the real detector at high luminosity and full speed. Each fiber connection will transmit data at 3.25~Gbps payload bandwidth, i
+in the same way that modules will in the Phase II Tracker. The data will be derived from simulation, appropriately formatted, stored into on-board memories, and then played back at full speed.  
+The Pulsar IIb can be used for the Data Source stage, as each board has 40 optical interfaces on the RTM (all bi-drectional). Eight Puslar IIb boards can source 320 modules worth of data.
+
+%Each stage is described in more detail in the following sections. 
+%Although the architecture is flexible enough to allow for different configurations, for the sake of clarity and %simplicity, in what follows we will often use the specific configuration with eight Data Input Boards and four %Pattern Recognition Boards as an example. We will decide only at a later time which specific configuration we %will actually use for the demonstration system.
+
+This demonstration system will be implemented in stages: at mezzanine level, board level, crate level and multi crate level. These different stages would naturally proceed in sequence, from the bottom up. This way, we will have the opportunity to learn along the way about the performance of the different components of the system before having to decide exactly how the system will be cabled. A third crate, emulating three neighbor towers, will only be introduced in the late stage of the demonstration, when studies of system dynamics are undertaken. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.8\columnwidth]{Plots/VSTBench.eps}
+\caption{Vertical slice test bench principle.}
+\label{fig:VS_TBench}
+\end{figure}
+
+%\subsubsection{Data Source Stage}
+
+%\noindent The Data Source mimics the data flow out of the upgraded Phase II outer-tracker running at the %HL-LHC. It will drive 300+ fibers (one/module) to the trigger tower under study exactly as the data were %coming from the real detector at high luminosity and full speed. Each fiber connection will transmit data at %3.25~Gbps payload bandwidth, in the same way as the actual modules in the future real system. The data %will be derived from simulation, appropriately formatted, stored into on-board memories, and then played %back at full speed.  The Pulsar IIb board can be used for Data Source stage and each has 40 optical %interfaces over the RTM (all bi-drectional), and eight Puslar 2b boards can source 320 modules worth of data.
+
+%\subsubsection{Data Input and Pattern Recognition Board}
+
+%\noindent The Data Input Blade (DIB) is responsible for receiving data from the upstream detector %electronics (or Data Source output) and transferring them to the PRBs. Up to about 40 fiber links will be %received by each DIB. These input links may terminate on the RTM or mezzanine cards. Input fiber links are %nominally 3.25~Gb/s payload bandwidth. Again, the Pulsar IIb board can be used as DIB. The Data Input %Board will perform zero suppression, pack the stubs into a new format and send them to the PRBs. Current %estimates indicate that a rate of about 200 stubs per event per trigger tower, which yields a data rate of %roughly 256~Gb/s (200 stubs*32~bits/25~ns) entering each trigger tower on average.
+
+%\noindent As an example, in the configuration with eight DIBs and four PRBs, each DIB will be receiving an %average of about 256/8 = 32 Gb/s of stub data (after zero suppression). Each of the eight DIBs in the shelf %sends data to four PRBs in a round-robin, time multiplexed fashion. Since data is sent to four PRBs, these %transfers can take place at a quarter of the input rate, or 32/4 = 8~Gb/s assuming 200 stubs per trigger %tower per event.
+
+%\noindent In Figure~\ref{fig:VS_TBench}, the ATCA shelf devoted to the "core" trigger tower is shown %equipped with 8 DIB boards and 4 PRB boards while the shelf devoted to the "neighbor" towers is equipped %with 12 PRB boards, 4 PRB boards for each of the three neighbor towers. In general, each tower needs to %share data with 8 neighbors but 3 are sufficient in the demonstration system to test all possible data sharing %cases (eta, phi and "diagonal"). Simulated data corresponding to three neighbor towers are delivered from %PRB boards in the "neighbor" shelves to the corresponding PRB boards in the "core" shelf.
+
+%\subsubsection{Pattern Recognition Board}
+
+%\noindent Using again the special configuration above (8 DIB + 4 PRB), each PRB will be receiving 64 Gb/s %stub data on average. While receiving the data and sending them to the mezzanine cards, each PRB will %exchange data with the corresponding PRB, processing the same time slice, in the neighboring tower for %data sharing in the overlap regions. In this case, each PRB can use four 40Gb/s links (QSFP) for the %connections in the eta and phi directions, and four 10Gb/s links (SFP+) can be used for data sharing in the %"diagonal" directions. The PRB FPGA drives data received from the DIBs to the Pattern Recognition Mezzanine %(PRM) boards. This can also be done in a 4x time multiplexed fashion. The 4x time multiplexed transfers %from the PRB FPGA to the PRM would require a bandwidth of about 16Gb/s this way. Again, the Pulsar IIb %board can be used as PRB. 
+
+ 
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.4\columnwidth]{Plots/VSTBench_2.eps}
+%\caption{}
+%\label{fig:VS_TBench_2}
+%\end{figure}
+
+
+%\subsubsection{Pattern Recognition Mezzanine Card}
+
+%\noindent Each PRB supports four Pattern Recognition Mezzanine (PRM) boards. These boards are based on %the FMC standard and support high speed LVDS and SERDES connections to the PRB FPGA. In one possible %incarnation, each PRM will contain an FPGA, on board memory to act as Data Buffer, and an array of pattern %recognition devices. In our example configuration, we need to support 16~Gb/s between the PRB FPGA and %the PRM. The FPGA-PRAM (associative memory) channel bandwidth needs will be a fraction of the PRM input %bandwidth, because only relevant stubs will be sent to the relevant pattern recognition chip covering the %relevant regions of the trigger tower.
+
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.6\columnwidth]{Plots/VSTBench_3.eps}
+%\caption{PRM working principle}
+%\label{fig:VS_TBench_3}
+%\end{figure}
+
+\noindent  
+\noindent
+
+The traditional CDF SVT/FTK-style algorithm~\cite{bib:Ann-09}  can be used to benchmark of the performance of the track fitting stage. Various experimental track fitting algorithms can also be implemented in the FPGA on the PRMs.  Each can be studied and directly compared using the same vertical slice demonstration setup.
+
+
+%which is briefly described here. For a region of detector sufficiently small, a linear approximation gives helix %parameters close to those of full helical fit. In other words, for a road narrow enough that a helical fit can be %replaced by a simple linear calculation, each of the 5 helix parameters ($p_i$) can be calculated as the %vector product of prestored constants ($a_{ij}$) and the hit coordinates ($x_j$): $p_i = a_{i0} + %\sum_{i=1}^{N} a_{ij}x_{j}$  where N is the number of coordinates on the track, one for each SCT layer and %two for each pixel layer.  Since there are more than 5 coordinates, there are additional linear equations that %correspond to constraint equations, again where the constants are prestored.  There are (N - 5) such %equations. This linear approximation gives near offline resolution for regions considerably wider than a %single road.  A single set of constants will be used for each sector of the detector. The width of the sector at %each silicon layer is the size of a physical detector module.  Per sector, 5( N + 1) constants are needed for %the helix parameters, and (N - 5)( N + 1) constants are needed for the constraint equations.  The total %number of fit constants (FC) per sector is thus N(N + 1).
+
+

@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}R\&D Overview}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Physics Motivations}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}R\&D Overview}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Technical Description and Deliverables}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Track Trigger System Architecture}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Tracker geometry and Trigger Towers }{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}System Architecture}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Architecture Flexibility}{7}{subsubsection.2.2.3}
+\contentsline {paragraph}{N DIB and M PRM configuration ($N+M \le 12$)}{7}{section*.2}
+\contentsline {paragraph}{DIB/PRB combo configuration}{7}{section*.3}
+\contentsline {subsection}{\numberline {2.3}Vertical Slice Demonstrator System: Overview and Methodology}{8}{subsection.2.3}
+\contentsline {section}{\numberline {3}What has been achieved in CY2014 and Plan for CY2015}{8}{section.3}
+\contentsline {paragraph}{Pulsar II: Pulsar IIb has been successfully tested with excellent results}{8}{section*.4}
+\contentsline {paragraph}{ATCA 40G high performance full-mesh backplane evaluation using Pulsar IIb}{9}{section*.5}
+\contentsline {paragraph}{Pulsar IIb new RTM, Mini-backplane, and IPMC card}{10}{section*.6}
+\contentsline {paragraph}{Next versions of Pattern Recognition Mezzanine card design in progress}{10}{section*.7}
+\contentsline {paragraph}{VIPRAM R\&D: ProtoVIPRAM 2D chip has been successfully tested}{11}{section*.8}
+\contentsline {paragraph}{VIPRAM R\&D: Next versions of ProtoVIPRAM design in progress}{11}{section*.9}
+\contentsline {paragraph}{Fermilab URA fellowships for VIPRAM R\&D and engineering students}{13}{section*.10}
+\contentsline {paragraph}{Work done by the Northwestern group}{13}{section*.11}
+\contentsline {paragraph}{AM Simulaiton Work by USCMS}{15}{section*.12}
+\contentsline {section}{\numberline {4}Schedule, Milestones, and Resources}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Overall Schedule}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Milestones}{16}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Facilities, Equipment, and Other Resources}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Outlook}{17}{subsection.4.4}
+\contentsline {section}{\numberline {5}Budget Requests for FY2015}{17}{section.5}

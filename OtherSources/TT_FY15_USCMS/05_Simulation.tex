@@ -1,0 +1,32 @@
+\section{Simulation}
+
+\noindent Simulation software plays an essential role in the development of a tracking trigger for CMS as it provides crucial input to the system design and hardware development. It is, therefore, imperative to have a robust and efficient simulation framework at the early stage of the project. The efforts to develop simulation software for AM-based tracking trigger implementation can be divided into the following tasks:
+
+\begin{enumerate}
+\item {\bf Data Format/Flow}: this part of the framework defines data formats and simulates the flow of the data at all stages from the tracker front-end electronics (transmitting hits associated with stubs) to the Layer-2 of the system (transmitting L1 tracks). This package should include detailed emulation of every stage of the data transmission including:
+\begin{itemize}
+\item Front End $\rightarrow$ Data Input Boards
+\item Data Input Board $\rightarrow$ Pattern Recognition Board
+\item Pattern Recognition Board $\rightarrow$ PR Mezzanine
+\item Transmission of matched patterns from PR chip to the track fitting FPGA
+\item Transmission of L1 tracks to downstream
+\end{itemize}
+
+\item {\bf AM simulation}: this part of the framework defines geometry of the trigger towers, this package is close connected to the previous and following packages and provides the expected output geometry used in the construction of the hits and further on the roads.
+
+\item {\bf AM Pattern Bank Generation}: generates pattern bank, performs pattern matching and is interface-able with track fitting simulations. There is an existing framework in CMSSW, which serves this role and the Lyon/Padova/Kolkata groups provide development and support for it. The main effort here should be aimed at improving the current performance of the package, namely addressing limitations related to speed and memory consumption.
+
+\item {\bf Track Fitting}: this package is closely connected with the core simulations and provides functionality for emulating the FPGA-based track fitting stage. The package should be modular, allowing different algorithms to be compared. It should allow individual users to quickly access matched roads and associated hits, implement novel track fitting algorithms and test their performance.
+
+\item {\bf Integration}: in order to have a complete bit-level emulator of the tracking trigger system, integration of the packages outlined above is necessary. The work here is to integrate, streamline and validate functionality of the full emulator.
+
+%\item {\bf GT interface}: this part of the framework provides simulation of the interface between the L1 tracks and the outputs of the calorimeter and muon triggers. This part should be developed in close collaboration with groups working on the upgraded calorimeter and muon L1 trigger systems.
+
+\item {\bf Fast simulation}: based on the SVT and FTK experience, it is reasonable to expect that the development of the full software suite outlined above will take a long time (years). On the other hand, improvements in the performance of CMS due to the availability of a tracking trigger need to be quantified on a much shorter time scale. It may, therefore, be advisable to invest in the development of a "light" tracking trigger simulation framework. The goal of this package would be to mimic the L1 tracking trigger performance by using offline hit/track collections and applying parametric efficiencies, fake rates and resolutions.
+
+\item {\bf Vertical Slice Demonstration System Firmware and Software}: In addition to the emulators, a number of software and firmware packages will have to be delivered for each hardware component of the demonstrator. This includes hardware access software, low-level board validation software, integration software and monitoring software. The firmware for each component includes: core functionality firmware, validation firmware and algorithmic firmware.
+
+\end{enumerate}
+
+
+\clearpage

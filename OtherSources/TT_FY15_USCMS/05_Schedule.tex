@@ -1,0 +1,51 @@
+\section{Schedule, Milestones, and Resources}
+\subsection{Overall Schedule}
+
+The schedule of the proposed program is driven by the current state of the R\& D efforts, the CMS desire to perform the Vertical Slice Demonstration by 2017 and (of course) available funding.  In order to meet the aggressive deadline, we have to finalize design of the hardware in CY 2014 with year CY2015 dedicated mainly to the firmware development, setting up the demonstration test-stand and performing the actual testing. This was the goal stated in our previous proposal, and so far we are more or less on schedule meeting this aggressive goal for CY2014. This is only possible because we have already done so much tracking trigger R\&D over the past few years (mostly with non-CMS funds). 
+
+Currently the Pulsar IIb prototypes are undergone extensive testing over the past few months and the results have been very promising, we expect to perform crate level testing of Pulsar IIb in Fall 2015 to make sure the design is good enough for the demonstration. It is likely that based on the results of the testing so far, there is no need for another round of prototyping (Pulsar IIc). Either way, we expect the design will be finalized with production as early as in late 2014, followed by the production version testing in early 2015. 
+
+Similarly, the first prototype of the associative memory chip using conventional 2D technology has been successfully tested for the core functionalities together with the prototype mezzanine cards. 
+As outlined above, this prototype chip was intended for testing all the important design blocks of the core functionalities of associative memory. For this purpose the design was kept simple and for this version we intentionally did not include all features needed for L1 applications. Engineering work to adjust the 2D chip design to accommodate higher pattern density, faster speed and sparsified readout needed for L1 applications has started and has been taking into consideration results of the protoVIPRAM1 testing. We expect protoVIPRAM-L1CMS to be submitted in spring 2015 with delivery late 2015.
+
+Design of the Pattern Recognition Mezzanine card is proceeding in parallel and in close communication with the protoVIPRAM-L1CMS development. Submission will likely take place at the end of 2014.  Since production of the card is expected to take less time than for the ASIC, the new mezzanine prototype is expected to be available for testing early 2015, prior to the arrival of protoVIPRAM-L1CMS chips. Extensive and challenging firmware work will be done during much of the CY2015. Due to the reduced (50\%) FY2014 funding for engineering effort, the protoVIPRAM-L1CMS progress was slowed. As a result, the next version of pattern recognition mezzanine card design also slowed because the design requires the full specification of the protoVIPRAM-L1CMS chip. Both the protoVIPRAM-L1CMS and the pattern recognition mezzanine card designs are crucial for the L1 tracking trigger demonstration and having adequate funding for these efforts in FY2015 is very important to the overall success of this project. 
+
+The data flow and data format within the Pulsar II based tracking trigger demonstration system has been specified in FY2014. The main work left for Pulsar IIb for the vertical slice demonstration will be firmware implementation in FY2015. Much of the CY 2015 will be dedicated to the final tests of the production Pulsar II related hardware components, firmware implementation and initial integration. It is expected that most of the engineering effort will be spent on the firmware development for the Pulsar and  PRM cards. Different versions of firmware will be needed for the Pulsar board to function as DIB and PRB, as well as to source data. Iniital integration is expected to take place over Summer 2015 followed by initial crate-level testing and 
+measurements of system performance parameters. Of course, the overall schedule of the demonstration system will depend on the schedule of the protoVIPRAM-L1CMS chips. 
+
+\subsection{Milestones}
+\begin{itemize}
+
+\item Pulsar-II/RTM design finalized: by end of CY2014
+\item Pulsar-II/RTM final design tested: by early CY2015
+\item Initial Pulsar-II firmware for DIB, PRB finished: early CY2015
+\item Pattern Recognition Mezzanine card design finished:  end of CY2014
+\item Pattern Recognition Mezzanine card testing:  early CY2015
+\item Demonstration system initial specification through simulation:  early CY2015
+\item ProtoVIPRAM-L1CMS initial design dedicated for CMS L1 Track Trigger finished: early CY2015
+\item ProtoVIPRAM-L1CMS prototype available for testing:  late CY2015
+\item Crate level test-stand setup: summer CY2015
+\item Initial system level integration: end of CY2015
+
+\end{itemize}
+
+\subsection{Facilities, Equipment, and Other Resources}
+
+The proposed R\&D would be carried out as a collaborative effort among Fermilab, Northwestern, University of Florida, TAMU, Rutgers, UIC, and Tezzaron Semiconductor~\cite{bib:Tezzaron}. Some of the physicists in this collaboration have been involved in the original design, building, commissioning, operation and upgrade of the CDF SVT system, as well as the design work of the FTK system. Others have a long history of involvement with the current CMS Tracker and CDF SVX detector. A few years ago, Fermilab also collaborated closely with INFN Pisa and Frascati in Italy on the 2D development of AMchip04~\cite{bib:AMchip04} in 65 nm.  Fermilab contributed to the new Majority Logic design as well as the pattern readout algorithm using a Fisher Tree approach. The extensive experience developed with the associative memory approach within the collaboration will be important for carrying out this R\&D project.  In addition, this proposal will leverage unique areas of engineering expertise at Fermilab. 
+
+The Fermilab ASIC Design Group is a leader in 3D ASIC design, and has expertise with the design of the memory cells.  The preliminary protoVIPRAM design work already done by the group would be a starting point for the design of a
+dedicated associative memory device for the CMS L1 tracking trigger demonstration, using conventional 130nm technology to keep costs low.
+
+The LPC at Fermilab has been and will be providing an intellectural and physical focal point to this project. The groups involved have resident physicisits at LPC or are frequent visitors. 
+
+We believe that, with adequate funding in FY2015, we are reaching a critical mass of technical and scientific expertise within USCMS to move forward with the design and construction of the vertical slice demonstration for the CMS Level 1 tracking trigger. So far we have attracted many collaborators over the past year within and outside USCMS, 
+and we continue to actively look for more collaborators to join the project.
+
+\subsection{Outlook}
+
+While this tracking trigger R\&D proposal is fully dedicated to the CMS HL-LHC Phase II upgrade, it is useful to consider a perspective that extends beyond the LHC.  Generally speaking, the ultimate physics reach of any higher energy hadron collider (given a center-of-mass energy) will be governed by its maximum instantaneous luminosity. Given the huge cost associated with any future higher energy hadron collider, it is crucial to push for higher luminosity (similar to HL-LHC or beyond). This is to maximize the new physics reach of the huge investment already made, before a new higher energy collider can be proposed or built. Because tracking information is the most effective means for high pile-up mitigation, a high performance, real time tracking trigger will be mandatory. From this perspective, the USCMS-led tracking trigger project is truly a pioneering effort; not only will it be crucial for the success of CMS physics program in the HL-LHC era, it also lays the technological foundation for the future of the field. In some ways, perhaps the present situation is similar to the case of CDF in the 1980s, when the silicon detector was first developed for hadron collider despite huge technological challenges.  
+
+%As that example attests, History smiles on those with foresight!
+
+
+
