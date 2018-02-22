@@ -1,19 +1,19 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces A 14 slot ATCA shelf with integrated redundant AC-DC power supplies.}}{6}
-\contentsline {figure}{\numberline {2}{\ignorespaces Full mesh backplane connections in a 14 slot shelf. Each line represents 4 bidirectional lanes.}}{6}
-\contentsline {figure}{\numberline {3}{\ignorespaces The Pulsar IIb front board, RTM, IPMC and PRM mezzanine.}}{8}
-\contentsline {figure}{\numberline {4}{\ignorespaces The Pulsar IIb front board block diagram.}}{8}
-\contentsline {figure}{\numberline {5}{\ignorespaces The Pulsar IIb synchronization interface.}}{10}
-\contentsline {figure}{\numberline {6}{\ignorespaces Front board and RTM power routing and management connections.}}{12}
-\contentsline {figure}{\numberline {7}{\ignorespaces The Fermilab IPMC mezzanine card.}}{13}
-\contentsline {figure}{\numberline {8}{\ignorespaces Inconsistant link performance on an early 40G backplane.}}{15}
-\contentsline {figure}{\numberline {9}{\ignorespaces Example links on the COMTEL full mesh backplane, 10Gbps PRBS7.}}{16}
-\contentsline {figure}{\numberline {10}{\ignorespaces RTM link performance, AOC loopback at 10Gbps PRBS7.}}{17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Link performance at 10Gbps PRBS7 between the Pulsar2b FPGA a Kintex UltraScale FPGA on Mezzanine card.}}{18}
-\contentsline {figure}{\numberline {12}{\ignorespaces High speed serial link clock domain crossing and data alignment scheme.}}{20}
-\contentsline {figure}{\numberline {13}{\ignorespaces The Pulsar2 test stand at Fermilab. The upper ATCA shelf (COMTEL) is for Pattern Recognition Boards (PRBs) and the lower shelf (Schroff) is for Data Source Boards (DSBs). The short rack contains a VME crate and TTCcx board. Inset: the rear of the rack showing 100 QSFP+ cables connecting the two ATCA shelves.}}{22}
-\contentsline {figure}{\numberline {14}{\ignorespaces Smoke detection and AC power interlock in the test stand rack.}}{22}
-\contentsline {figure}{\numberline {15}{\ignorespaces Data Source Board firmware block diagram.}}{23}
-\contentsline {figure}{\numberline {16}{\ignorespaces The Pattern Recognition Board firmware block diagram. The observation points shown in red are used to describe PRB latency figures in Section 8.6\hbox {}.}}{24}
-\contentsline {figure}{\numberline {17}{\ignorespaces Two examples of stub merge logic. The ``parking" design (left) left uses an array of FIFOs while the ``streaming" design (right) is based around a tree of internally buffered sort nodes.}}{25}
-\contentsline {figure}{\numberline {18}{\ignorespaces PRB latency as measured on the test stand hardware. Channel 2 (blue) shows the arrival of the first stub into the PRB from the RTM (aka point 1) Channel 3 (purple) shows the first stub arriving at the PRM input (point 5). The time between this markers is shown as 1100ns which is in good agreement with our PRB latency estimate of 1085ns from Table 2\hbox {}. }}{28}
-\contentsline {figure}{\numberline {19}{\ignorespaces Two simple examples of data distribution architectures based on a full mesh network (left) and ``direct flow" fibers (right).}}{29}
+\contentsline {figure}{\numberline {1}{\ignorespaces A 14 slot ATCA shelf with integrated redundant AC-DC power supplies.}}{7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Full mesh backplane connections in a 14 slot shelf. Each line represents 4 bidirectional lanes.}}{7}
+\contentsline {figure}{\numberline {3}{\ignorespaces The Pulsar IIb front board, RTM, IPMC and PRM mezzanine.}}{9}
+\contentsline {figure}{\numberline {4}{\ignorespaces The Pulsar IIb front board block diagram.}}{9}
+\contentsline {figure}{\numberline {5}{\ignorespaces The Pulsar IIb synchronization interface.}}{11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Front board and RTM power routing and management connections.}}{13}
+\contentsline {figure}{\numberline {7}{\ignorespaces The Fermilab IPMC mezzanine card.}}{14}
+\contentsline {figure}{\numberline {8}{\ignorespaces Inconsistant link performance on an early 40G backplane.}}{16}
+\contentsline {figure}{\numberline {9}{\ignorespaces Example links on the COMTEL full mesh backplane, 10Gbps PRBS7.}}{17}
+\contentsline {figure}{\numberline {10}{\ignorespaces RTM link performance, AOC loopback at 10Gbps PRBS7.}}{18}
+\contentsline {figure}{\numberline {11}{\ignorespaces Link performance at 10Gbps PRBS7 between the Pulsar2b FPGA a Kintex UltraScale FPGA on Mezzanine card.}}{19}
+\contentsline {figure}{\numberline {12}{\ignorespaces High speed serial link clock domain crossing and data alignment scheme.}}{21}
+\contentsline {figure}{\numberline {13}{\ignorespaces The Pulsar2 test stand at Fermilab. The upper ATCA shelf (COMTEL) is for Pattern Recognition Boards (PRBs) and the lower shelf (Schroff) is for Data Source Boards (DSBs). The short rack contains a VME crate and TTCcx board. Inset: the rear of the rack showing 100 QSFP+ cables connecting the two ATCA shelves.}}{23}
+\contentsline {figure}{\numberline {14}{\ignorespaces Smoke detection and AC power interlock in the test stand rack.}}{23}
+\contentsline {figure}{\numberline {15}{\ignorespaces Data Source Board firmware block diagram.}}{24}
+\contentsline {figure}{\numberline {16}{\ignorespaces The Pattern Recognition Board firmware block diagram. The observation points shown in red are used to describe PRB latency figures in Section 8.6\hbox {}.}}{25}
+\contentsline {figure}{\numberline {17}{\ignorespaces Two examples of stub merge logic. The ``parking" design (left) left uses an array of FIFOs while the ``streaming" design (right) is based around a tree of internally buffered sort nodes.}}{26}
+\contentsline {figure}{\numberline {18}{\ignorespaces PRB latency as measured on the test stand hardware. Channel 2 (blue) shows the arrival of the first stub into the PRB from the RTM (aka point 1) Channel 3 (purple) shows the first stub arriving at the PRM input (point 5). The time between this markers is shown as 1100ns which is in good agreement with our PRB latency estimate of 1085ns from Table 2\hbox {}. }}{29}
+\contentsline {figure}{\numberline {19}{\ignorespaces Two simple examples of data distribution architectures based on a full mesh network (left) and ``direct flow" fibers (right).}}{30}
