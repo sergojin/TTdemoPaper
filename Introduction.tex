@@ -1,1 +1,37 @@
-\section{Introduction\label{sec:intro}}
+
+\section{Introduction \label{sec:intro}}
+
+\subsection{Motivation}
+
+
+In order to maximize the potential for the discovery, CMS must preserve or improve its ability to identify, in real time, events with signatures consistent with the Higgs boson and new particle decays for high luminosity LHC (HL-LHC) operation. This is a highly non-trivial task given the high pile-up conditions anticipated in the HL-LHC era. At LHC, the only major detector not used at L1 trigger are the silicon tracking detectors. It has become clear that the development of the L1 tracking trigger system is of utmost importance for CMS for the HL-LHC, in order to maintain physics acceptances for basic objects (leptons, photons, jets and MET).  Without L1 tracking, most quantities traditionally used for L1 are washed out and become unusable due to the huge "background" created by the overlap of too many collisions in the same beam crossing. This would put most of the anticipated physics program out of reach. 
+
+Consequently, the design of the Phase-II CMS Tracker must allow for an effective implementation of the tracking trigger.... (add a few sentences here).  Because the construction of the Phase-II Tracker will take many years, its tracker design must be finalized sooner.    Silicon-based Level-2 tracking trigger systems based on associative memory were successfully implemented in the past~\cite{bib:Rist-89}~\cite{bib:Ade-06}~\cite{bib:Ade-07} and are being actively explored at present~\cite{bib:FTK-TP}~\cite{bib:FTK-TDR}. Experience with these systems will serve as useful input to the design of the CMS L1 tracking trigger. However the higher occupancies anticipated at the HL-LHC and the low latencies required at L1 (about 10~$\mu$s total and a few $\mu$s for the track finding stage) present us with a formidable set of challenges that we need to attack with a well organized R\&D campaign in order to be successful. A silicon-based L1 tracking trigger has never been realized at this scale and thus it is imperative that its feasibility be demonstrated before the design of the Phase-II Tracker can be finalized. To achieve this goal, a Vertical Slice System Demonstration system has been designed and built, using the assocative memory approach, and the  system comprises a full tracking trigger path and uses simulated high-luminosity data to measure trigger latency and efficiency, to study overall system performance and to identify appropriate solutions to possible bottlenecks. The demonstration system is by no means meant to be final  but serves the purpose of an existence proof.
+
+\subsection{Associative Memory approach}
+
+The Associative Memory solves the combinatorial problem, inherent to this kind of pattern recognition algorithms, by employing a massively parallel architecture to compare each detector hit to a large number of pre-calculated geometrical patterns simultaneously. Then, the selected patterns or roads are processed using fast FPGAs to perform track fitting. Since each pattern corresponds to a very narrow "road" through the detector, the usual helical fit is much simplified and fast by using a pre-calculated set of parameter values for the center of the road and applying corrections that are a linear function of the actual hit positions in each layer.  Because roads are narrow, this linear approximation works very well and the track fitting stage is much simplified and fast~\cite{bib:Ann-09} using pre-calculated track parameters for hits in the center of the road, and applying corrections that are linear in the exact position of the hits in each layer. Although roads are narrow, there is still a finite probability that multiple hits may fall within the same road for a given detector layer, requiring multiple fits with different hit combinations and leading to longer execution times. To reduce latency, the probability of occurrence of multiple hits in the same road must be made as small as possible by making the roads as narrow as possible and, consequently, increasing the total number of them we need to store in the AM to cover the parameter space of interest. This is why an aggressive R\&D program focused on achieving higher AM densities is an important component of the effort needed to reach the unprecedented low latencies required for silicon based tracking at the HL-LHC crossing frequency.
+
+As soon as all the hits have been stored in the AM, found tracks are ready to be output. The whole latency incurred is the time needed to load the hits plus the time to read the matched patterns. In this sense the AM is hard to beat for this particular task. However, the design of an Associative Memory system capable of dealing with the much higher complexity of the HL-LHC collisions, and with the much shorter latency required by Level 1 triggering, poses significant, still unsolved, technical challenges. While we have a very aggressive R\&D program at Fermilab to advance the state-of-the-art associative memory technology (the 3D VIPRAM~\cite{bib:VIP-11} R\&D), we are open to possible new alternative approaches. Since the Associative Memory approach is a proven solution to tracking triggers in a hadron collider environment, it is chosen as the baseline for this demonsttration. 
+
+
+
+\noindent 
+
+
+
+%Main components
+
+%Fiber data transmission,
+%ATCA crates,
+%Full mesh backplane,
+%Fiber receivers,
+%Pattern Recognition Boards,
+%Pattern Recognition Mezzanines,
+%AM as a possible incarnation (3d technology),
+%Inter-tower communication,
+
+%Bandwidth and latency considerations
+
+
+\clearpage
