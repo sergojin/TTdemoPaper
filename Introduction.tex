@@ -1,6 +1,55 @@
 
 \section{Introduction \label{sec:intro}}
 
+
+[The concept of triggers]
+Over their lifetime most high-energy physics experiments, such as those operating at hadron colliders, are exposed to ever increasing event rates. Due to the large size, the complexity, and the high granularity of their various detector components, the output data rate from these experiments can be staggering. As a result, processing and recording the vast amount of data for every event seen by these detectors is practically impossible. Collider experiments have dealt with this high data flux by implementing real-time event filters, or triggers, that reduce the flux to manageable levels for offline processing. 
+
+These triggers are critical to the success of the physics program of the experiments as they allow selecting only those events with which important measurements or discoveries can be made. To that end, the reconstruction of all physics objects in each event has to be carried out as accurately and as fast as possible. To accomplish that, collider experiment triggers are typically designed so that decisions are made in sequential steps, or levels. Through this scheme, each successive level confronts a significantly reduced event rate with respect to the previous one and has access to more detailed and more complete information.
+
+[LHC and CMS]
+During Run 2 of the LHC, stretching from 2015 through 2018, the instantaneous luminosity provided by the accelerator at the CMS and ATLAS experiments has reached values of up to 2x1034 cm-2s-1, corresponding to a proton-proton collision rate of approximately 2 GHz; resulting from the 40 MHz accelerator bunch-crossing rate, with about 50 proton-proton interactions per bunch crossing on average.  At the CMS experiment each event [bunch crossing or event size?] generates about [1Mb] of [raw] data in the detector, from XXXX electronic channels [point out different numbers for trigger and for DAQ -- both for number of channels and for event size]. The total data rate coming from the detector is XXXX Tb/sec for the DAQ and YYYY Tb/sec into the trigger system. The rate is dominated by the tracking detectors, which are comprised of ZZZZ electronic channels. 
+
+The CMS trigger is a two-level decision system, the level 1 (L1) and the High-Level Trigger (HLT), each rejecting the less interesting events, and each providing a rate reduction of about a factor of 100. The 40 MHz event rate is thus reduced to about 1 KHz.
+
+[LHC and CMS Phase-2]
+
+In order to vastly expand the physics program of the ATLAS and CMS experiments, the LHC and the experimental collaborations are pursuing a very significant upgrade program called Phase-2, with an expected completion date of 2025. This will usher the so-called HL-LHC era (for High-Luminosity LHC) during which the luminosity will increase by a factor of five or so relative to the Run 2 luminosity, resulting in an average number of proton-proton collisions per bunch crossing higher than 200. To contend with such a serious increase in collision rates and detector occupancies several of the detector systems of the ATLAS and CMS experiments are being upgraded. In particular the trigger systems need to undergo a significant redesign so that, in spite of the added event complexity due to such high pileup, the physics program remains viable and can possibly even be improved. 
+
+[The Track Trigger concept]
+
+As part of its Phase-2 set of upgrades, the CMS experiment is planning on including the new outer tracker detector envisioned for the HL-LHC era in the L1 trigger. The ability to reconstruct tracks at the L1 trigger, rather than at the HLT as currently implements, will do this for the experiment [see TDR]:
+•	A –physics objects
+•	B – lower pt
+•	C – met/ particle flow 
+•	Etc.
+
+However, this is extremely challenging due to
+
+•	A – number of tracks, rate etc
+•	B – latency needed
+•	C – efficiency/precision needed
+•	Etc.
+
+[Double sided concept/stubs]
+
+To overcome these challenges the outer tracker modules have been designed such that the produce stubs rather than hits [expand on this]… 
+The rate reduction from hits to stubs is about a factor of 10. 
+
+[tracker geometry figure and module/stub concept figure]
+
+[Divide in space and time]
+
+Still, the stub rates are… the trigger architecture is therefore still in need of further parallelization, this is achieved by processing different regions of the detector in parallel and also by processing in parallel events from different bunch crossings [spaced by 25 ns]. All stubs to be processed together in a particular space/time region need to be brought to the same electronics platform at the same time
+
+[AM solution]
+
+In what follows we describe an end-to-end platform to solve the tracking problem at the L1 trigger for the CMS experiment. This solution is based on Associative Memories to perform a pattern recognition algorithm that filters out stubs that cannot be associated to real tracks. As part of the platform we present several innovative hardware and algorithmic developments that… The full chain of developments has been tested successfully through a vertical slice demonstrator that is described in more detail in what follows.
+
+
+
+***** Below is the old text, to be merged *****
+
 \subsection{Motivation}
 
 
