@@ -177,14 +177,119 @@ DIB/PRB/PRM Count &  Fabric Channel BW (minimum)  &	PRM Input BW (minimum) \\
 
 
 
-\subsection{Applying Associative Memory approach to CMS }
+\section{Applying Associative Memory approach to CMS }
 
 
 
-\subsubsection{Pattern Bank definition and optimization through simulation }
+
+\subsection{Pattern Bank definition and optimization}
+
+\subsection{Definition of superstrips}
+
+	The principle of operation of the Associative Memory requires the surface of the detector to be subdivided into a finite number of elements that we call "superstrips".
+	The subdivision into superstrips can be one-dimensional (strips) or bi-dimensional (pixels).
+	Any combination of superstrips from different detector layers, compatible with the trajectory of a single valid track, constitutes a valid "pattern". The ensemble of all valid patterns constitutes the "pattern bank" to be loaded into the Associative Memory.
+	Deciding the size and shape of the superstrips is the first, and probably the most important, design choice one needs to make in the process of searching for a solution to a specific pattern recognition problem using the Associative Memory approach.
+	
+	It is immediately intuitive that the superstrips cannot be too large or too small. If the superstrips are made smaller and smaller, then the number of patterns that are needed will grow with a high power of the inverse of the superstrip size and will soon exceed the maximum capacity of the Associative Memory that may be available. On the other hand, if the superstrips are made exceedingly large, then the probability of having multiple hits in the same superstrip will grow and more computing will be required to solve the ambiguities and identify the hits actually belonging to a valid track.
+	The amount of information carried by the set of patterns identified by the Associative Memory for a given event, diminishes as the size of the superstrips grows, obviously being reduced to zero in the extreme case when each detector layer is reduced to a single superstrip and, consequently, the pattern bank contains a single pattern.
+	Ideally the superstrips should be small enough to ensure that, in most cases, each one will not contain more than a single hit. Here we see how the optimal superstrip size may depend strongly on the occupancy of the detector and how a larger Associative Memory may be required to cope with higher occupancy.
+	
+	There is also a limit to how small you can sensibly make the superstrips that is connected to the precision of the coordinate measurement. It is quite intuitive that it is of very little value having superstrips much smaller than the measurement error. In fact that would lead to a very large increase in the number of patterns with very small improvement of the information carried by each pattern identified by the Associtive Memory.
+
+	From all this we can understand how the determination of the optimal superstrip size may turn out to be a complex multi-dimensional optimization problem that involves many parameters, including the nature and geometry of the detector, the precision of the coordinate measurement, the characteristics of the tracks we need to identify, the occupancy, the maximum capacity of the Associative Memory that is available and the amount of computing power that is available to solve the residual ambiguities remaining after the Associative Memory has done its job.
+
+	Typical figures of merit to be considered in the optimization of a trigger application may include the total time needed to complete the track finding process (latency), efficiency, rate of fake tracks (purity), precision of track parameter determination.
+In the following sections we will describe in some detail the process we followed to optimize the dimension and shape of the superstrips and to generate the pattern bank for the particular problem of the Level 1 tracking trigger for the CMS tracker for the HL-LHC Phase II upgrade.
 
 
-\subsubsection{Comparison between SVT, FTK and CMS L1 tracking trigger }
+
+\subsection{Determination of superstrip size}
+
+
+We started with the determination of the minimum superstrip size compatible with coordinate measurement errors. The main contribution to measurement error is multiple scattering which  tends to increase as we go from the inner to the outer detector layers because of the increasing amount of traversed material. For this reason we expect the minimum superstrip size to be both layer and momentum dependent.
+
+We used a detailed simulation of the detector to generate a large number of tracks and compare the position of the hits thus produced in each layer with the corresponding ideal position, that is where the hit would be if there were no measurement errors or secondary interactions like multiple scattering. 
+The distribution of the simulated tracks in eta and Pt was chosen to resemble as closely as possible what we expect for the HL-LHC run. The minimum Pt value was set at 3 GeV/c.
+The difference between the actual and the ideal position along the phi direction was histogrammed for each detector layer independently and the results are shown in Fig.xxx.
+Each histogram was integrated, symmetrically starting from the center, to include 90\% of the area and the resulting interval was taken as the size of the superstrips along the phi direction for that layer. The resulting superstrip widths are shown in Table XXX. It can be noted that, due to the increasing amount of material, the size of the superstrips is increasing from the center out even when expressed as angles. It is because of this feature that we named this particular superstrip configuration as "fountain".
+
+During the optimization process, the "fountain" configuration was always assumed as the basis for the superstrip subdivision in the phi direction. When looking for an optimal working point we typically applied a "scale factor" to the "fountain" configuration to vary the size of all the superstrips while maintaining a constant ratio between different layers. When two-dimensional superstrips where used, an orthogonal subdivision in the z direction was added. 
+
+
+
+\subsection{Generation of the pattern bank}
+
+To generate a pattern bank we also need to define a "target parameter region". That is the region in track parameter space where we want the maximize the efficiency of the track finding process. That tipically translates to intervals in eta, phi, Pt and coordinates of the origin of the track.
+
+Once the superstrips and the target parameter region are specified, the procedure to generate the pattern bank is, in principle, straightforward. All you need to do is to create a sufficiently large set of simulated tracks within the target parameter region and, for each one of them, record which superstrip it goes through in each detector layer. A pattern is defined as the set of superstrip identifiers (typically integer numbers), one per detector layer. The ensemble of all the different patterns generated by all the tracks in the sample constitutes the "pattern bank".
+
+The "coverage" of a pattern bank is defined as the probability that, given a track randomly extracted within the target parameter region, the pattern it generates is actually present in the pattern bank. In practice it is never possible to reach 100\% coverage, but you typically get closer and closer as you generate more and more tracks and keep adding less and less probable patterns to the pattern bank.
+Fig. xxx shows a typical plot of the pattern bank coverage as a function of the size of the pattern bank. You can see how the curve tends to saturate as we are adding patterns that are less and less probable.
+
+During the pattern bank generation process, the same patterns are being hit multiple times and, although we add a particular pattern to the bank only once, we record the number of times it has been hit. This number provides an estimate of the probability of that particular pattern to be hit by a track randomly extracted within the target parameter region. We refer to this probability as "popularity".
+A strategy that we have often been using is to start by generating a very large pattern bank, larger than we can reasonably afford given the maximum size of the associative memory we expect to be available. We then sort the patters by decreasing popularity and include patterns in the bank, starting from the most popular, up to the desired coverage or up to the size of the available associative memory. Using the most popular patterns first makes optimal use of the associative memory space.
+
+\subsection{Definition of Trigger Towers}
+
+As explained earlier (xxx), we propose to subdivide the whole tracker into 48 trigger towers and perform track finding in parallel in each one of them. Since some tracks can traverse more than one tower, some detector regions will need to be shared between multiple towers and we need to exercise care in order to avoid track duplication caused by the same track being found in multiple towers.
+We first define "virtual" trigger towers as a subdivision of the track parameter space into 48 non overlapping regions. The union of all the 48 regions represents the total parameter space where we want track finding efficiency to be optimized. "Physical" trigger towers are constructed by collecting hits from all detector regions that are needed to obtain full efficiency for all the tracks belonging to one particular virtual tower. Since tracks belonging to different virtual towers can traverse the same physical detector region, it follows that, in general, physical towers overlap (while virtual towers never do). This also solves the problem of potential track duplication because each tower will only accept tracks coming from its own virtual tower and discard possible leaks from neighboring regions.
+
+Fig.xxx is a cartoon showing a possible naive way of defining virtual towers. The parameter space we consider is four-dimensional: phi, Pt, eta, z of the origin. We decompose this four-dimensional parameter space into the cartesian product of two orthogonal two-dimensional spaces. The first space is phi versus Pt (we actually use 1/Pt, mainly because of its regularity through infinite Pt) and the second is eta versus z0 (z coordinate of the origin of the track).
+The whole parameter space we want to cover is $Pt > 3$ GeV, $|\eta| < 2.4$ and $|z_0| < 15$ cm.
+One simple way to divide this parameter space into 48 non-overlapping regions is to define eight equal intervals in phi and six equal intervals in eta. This is shown in Fig.xxx.
+
+There is some flexibility in the exact way we can define the subdivision of track parameter space into virtual towers, so we can ask ourselves if there is an optimal way to do it. One thing we want to try to minimize is the overlap between adjacent towers. Larger overlaps mean more hits to be fanned out to multiple physical towers and, consequently, larger data traffic and more data processing.
+
+Fig.xxx shows a slightly different way of defining 48 virtual towers. The difference is that the separation between regions is not depending on a single parameter but on a combination of both. This "slant" solution has actually been shown to reduce the overlap between physical towers by a significant fraction (???) with respect to the "straight" solution shown in Fig.xxx. The cartoons in Fig.xxx show how the "straigh" and the "slant" virtual towers translate to physical space and how the overlap regions are changed. For our particular application, the slant angle in both projections was optimized to achieve the minimum amount of overlap between physical towers.
+
+The studies described in what follows are focused on a single trigger tower located in a central eta slice ($0 < \eta < 0.8$). Given the symmetry of the detector, the phi position is irrelevant.
+
+
+
+\subsection{Optimization}
+
+
+The main purpose of these studies was to find at least one viable "working point", that is a pattern bank compatible with the maximum size of the associative memory we believe we can comfortably implement and which, at the same time, would provide sufficient track finding power, to make the remaining pattern recognition, to be performed by the following stages of the tracking trigger, solvable within the allotted maximum latency time.
+
+Pattern banks of different sizes and with different superstrip definitions were generated and the performance of each one of them was studied with Monte Carlo events which included a detailed simulation of HL-LHC collisions with different instantaneous luminosities and of the Phase II upgraded central tracker. 
+
+For each simulated HL-LHC collision, all the tracker hits are fed to the AM. The AM recognizes the patterns that may correspond to a valid track because a sufficient number of superstrips contains at least one hit. All these recognized patterns are passed to the "Data Organizer" stage were all the relevant hits are retrived and attached to each pattern to form a "road". These "roads" will then be fed to the track fitting stage where the possible remaining ambiguities will be solved and track parameters will be extracted.
+
+Given a specific pattern bank, the number of roads generated by the AM for each event is a relevant figure of merit because more roads means more work for the track fitting stage and, consequently, larger latencies. 
+
+The number of roads obviously depends also on the properties of the collision, expecially on the occupancy of the detector. For this study we used a Geant simulation of the Phase II upgraded CMS detector and minimum bias collisions at an instantaneous luminosity corresponding to and average number of collisions per beam crossing of 200 (PU 200).
+
+Fig.xxx shows the number of patterns in the bank versus the number of roads generated for each crossing for different possible definitions of the superstrips. Patterns were added to the pattern bank until a coverage of at least 95\% was reached. 
+
+The distribution of the points clearly shows the nature of the compromise between the size of the pattern bank and the number of roads output by the AM, to be processed by the following stages. The larger the pattern bank, the more pattern recognition power we have in the AM, the less amout of work is left to be done for the following stages of the track finding process.
+
+From this plot we chose, as a baseline working point, the sf1\_z4 (?) pattern bank as a good compromise. That corresponds to a scale factor of 1 for the "fountain" configuration in the phi direction, and four approximately equal segments in the z direction in each one of the six tracker layers. This requires a pattern bank of about 1.6 million (?) patterns and will produce about 200 (?) roads per crossing.
+
+The amount of work that remains to be done by the track fitting stage depends on the number of roads, but also on the number of hits contained in each road. If each superstrip contains a maximum of one hit, then we can directly proceed to perform a fit and extract track parameters, but if any superstrip has two or more hits, then we will need some criteria to choose
+which one to use. One obvious possibility is to try all different possibilities and choose the fit that gives the best chi square. To represent the amount of work left to be performed by the tracks fitting stage we chose, as a figure of merit, the product of the number of hits in each non-empty superstrip, summed over all roads. We call this number "combinations" and, in the most simplistic implementation, corresponds to the total number of fits to be performed to complete the track finding process for that event.
+
+Fig.xxx shows the number of patterns in the bank versus the number of combinations. We can see the similarity to Fig.xxx in terms of the general features and of the nature of the compromise between the power of the AM (number of patterns) and the complexity of the task left for the following stages (combinations). 
+
+
+\subsection{Where do all the roads come from?}
+
+Why so many patterns are output by the AM when only a few tracks are actually present inside the parameter space region used to create the pattern bank? One reason is that, in order to obtain a good track finding efficiency, we want to accept a pattern even when one detector layer is missed. This will account for detector inefficiency, dead channels and limited pattern bank coverage. When a track goes through the detector and produces one hit in each layer, the corresponding pattern, if present in the pattern bank, will be recognized and output by the AM,
+but also all the patterns with the same superstrip in all layers except one, will be recognized.
+For a detector with six layers, for each pattern present in the bank, there are typically five to  ten similar patterns differing only in one layer that will also be recognized and output by the AM. Another source of "fake" patterns output by the AM is, obviously, pure combinatorics where hits from different tracks or noise hits randomly combine to fill all the superstrips in a pattern without a real corresponding track actually being present. The relative weights of the two components depends on the details of how the patter bank has been constructed and on the characteristics of the events, mainly the occupancy. 
+
+(Figures with distributions of number of "good hits" in a road?) 
+
+\subsection{Truncation}
+
+No matter what pattern bank we are using and what kind of events we are seeing, there will always be events where the number of roads output by the AM will be larger that what we can accept.
+In those cases we will need to truncate the road list. This will be a source of inefficiency.
+In order to mitigate the consequences of this source of inefficiency, we can sort the patterns from high transverse momentum to low transverse momentum. The AM outputs all the recognized patterns sequentially in order of increasing pattern address so, if we load the high Pt patterns in the lower addresses, they will come out first and if we truncate the road list, chances are that the lowest Pt tracks will suffer most of the inefficiency and the highest Pt tracks will be saved.
+
+(Plots,numbers?)
+
+
+\subsection{Comparison between SVT, FTK and CMS L1 tracking trigger }
 
 
 
